@@ -171,9 +171,7 @@ abstract class BaseService
                 if ($debug !== false) {
                     $this->debugResponse($xmlResponse);
                 }
-
                 $xmlParser = new XmlParser($responseClass);
-
                 $response = $xmlParser->parse($xmlResponse);
                 $response->attachment($attachment);
 

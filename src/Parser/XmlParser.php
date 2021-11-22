@@ -1,6 +1,8 @@
 <?php
 namespace DTS\eBaySDK\Parser;
 
+// require '/home/forge/artery.weebluecoo.com/vendor/dts/ebay-sdk-php/src/Trading/Types/EBayCollectAndRemitTaxesType.php';
+
 /**
  * Responsible for parsing XML and returning a PHP object.
  */
@@ -47,7 +49,6 @@ class XmlParser
         xml_set_object($parser, $this);
         xml_set_element_handler($parser, 'startElement', 'endElement');
         xml_set_character_data_handler($parser, 'cdata');
-
         xml_parse($parser, $xml, true);
 
         xml_parser_free($parser);
@@ -212,7 +213,7 @@ class XmlParser
                 case 'double':
                 case 'boolean':
                 case 'DateTime':
-                    continue;
+                    continue 2;
                 default:
                     return $meta->phpType !== '' ? new $phpType() : null;
             }
@@ -258,7 +259,7 @@ class XmlParser
                 case 'double':
                 case 'boolean':
                 case 'DateTime':
-                    continue;
+                    continue 2;
                 default:
                     return false;
             }

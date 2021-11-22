@@ -73,6 +73,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $eBayPlusTransaction
  * @property \DTS\eBaySDK\Trading\Types\GiftSummaryType $GiftSummary
  * @property \DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
+ * @property \DTS\eBaySDK\Trading\Types\EBayCollectAndRemitTaxesType $eBayCollectAndRemitTaxes
  * @property boolean $Gift
  * @property boolean $GuaranteedShipping
  * @property boolean $GuaranteedDelivery
@@ -454,6 +455,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Gift'
+        ],
+        'eBayCollectAndRemitTaxes' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\EBayCollectAndRemitTaxesType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayCollectAndRemitTaxes'
         ],
         'GuaranteedShipping' => [
             'type' => 'boolean',
