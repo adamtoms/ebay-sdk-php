@@ -4,8 +4,8 @@ namespace DTS\eBaySDK;
 use DTS\eBaySDK\Trading\Services;
 use DTS\eBaySDK\Trading\TradingService;
 
-require_once 'functions.php';
-require_once 'Trading/Services/TradingService.php';
+// require_once 'functions.php';
+// require_once 'Trading/Services/TradingService.php';
 require_once 'Trading/Types/EBayCollectAndRemitTaxesType.php';
 
 
